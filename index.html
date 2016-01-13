@@ -38,7 +38,7 @@
       // when video ends close this window
       function onPlayerStateChange(event) {        
         if(event.data === 0) {          
-          window.open('', '_self', '');
+          window.open(location, '_self', '');
           window.close();
         }
       }
