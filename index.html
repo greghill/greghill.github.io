@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <script language="javascript" type="text/javascript"> 
+    function windowClose() { 
+        window.open('','_parent',''); 
+        window.close();
+    } 
+    </script>
+  </head>
   <body>
     <div id="player"></div>
 
@@ -30,7 +38,7 @@
       // when video ends close this window
       function onPlayerStateChange(event) {        
         if(event.data === 0) {          
-          player.close();
+          windowClose();
         }
       }
 
