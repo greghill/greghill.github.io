@@ -24,18 +24,13 @@
 
       function onPlayerReady(event) {
         event.target.playVideo();
-        seekVideo(14);
-      }
-
-      function seekVideo(seekToTime) {
-        seekToTime = (Math.round(Math.random() * 10) - 5) + (60 * seekToTime)
-        player.seekTo(seekToTime , true);
+        player.seekto(884, true);
       }
 
       // when video ends close this window
       function onPlayerStateChange(event) {        
         if(event.data === 0) {          
-          close();
+          player.close();
         }
       }
 
